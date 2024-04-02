@@ -1,0 +1,357 @@
+/* **** IMPORTS ****  */
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* **** VAR COLORS ****  */
+:root {
+  --color-bluemarine: #08313c;
+  --color-bluelight: #247e97;
+  --color-redstrong: #e2001a;
+  --color-white: #ececec;
+  --color-greenlight: #9fd3c7;
+  --color-bluemarin2: #385170;
+  --color-bluedark: #142d4c;
+
+  /* **** DATADOME COLORS **** */
+  --color-green: #03dac6;
+  --color-blue: #49bff9;
+  --color-red: #ec5a5f;
+}
+
+/* **** GLOBAL ****  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "PT Sans", sans-serif;
+  /* border: 1px solid red; */
+}
+
+body {
+  max-width: 80%;
+  height: 100vh;
+  margin: auto;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+}
+
+nav a {
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  color: var(--color-bluelight);
+  padding: 5px 10px;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: auto;
+}
+
+/* **** GLOBAL TITLES ****  */
+
+h1 {
+  text-align: center;
+  margin: 10px 0;
+  color: var(--color-white);
+}
+
+h2 {
+  text-align: center;
+}
+
+/* **** NAV ****  */
+
+nav {
+  margin-top: 20px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 15px;
+}
+
+/* **** HEADER ****  */
+
+header {
+  display: flex;
+  width: 100%;
+}
+
+.header-left {
+  width: 20%;
+  margin: auto;
+  padding: 20px;
+}
+
+.header-left img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.header-right {
+  border-radius: 10px;
+  background-color: var(--color-white);
+  margin: auto;
+  padding: 10px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+
+.header-right h2 {
+  text-align: center;
+}
+
+.header-intro ul li {
+  margin: 10px;
+}
+.header-intro ul li:first-child {
+  font-weight: 800;
+}
+
+.header-intro ul li:nth-child(2) {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--color-bluelight);
+}
+
+.header-intro ul li:last-child {
+  line-height: 1.8;
+  text-align: justify;
+  font-color: var(--color-bluemarin2);
+}
+
+.experience-details h4 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.experience-details h5 {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* **** SKILLS ****  */
+
+.skills-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 2;
+  text-align: center;
+}
+
+.skills-container h3 {
+  text-align: center;
+  margin: 10px;
+}
+
+.skills-business {
+  border-right: 0.5px dashed grey;
+}
+
+.skills-business,
+.skills-technical {
+  width: 50%;
+}
+
+/* **** PROFESSIONAL EXPERIENCES ****  */
+
+.experience-list {
+  border-radius: 10px;
+  background-color: var(--color-white);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "dd mirakl wynd"
+    "keyrus viseo jl";
+}
+
+.experience-logo img {
+  max-width: 15%;
+  max-height: auto;
+  object-fit: cover;
+}
+
+.experience-logo,
+.experience-details {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+section.experiences > div > div {
+  text-align: center;
+  margin: auto;
+}
+
+.experiences-card-dd {
+  grid-area: dd;
+  border-right: 0.5px dashed grey;
+}
+
+.experiences-card-mirakl {
+  grid-area: mirakl;
+  border-right: 0.5px dashed grey;
+}
+
+.experiences-card-wynd {
+  grid-area: wynd;
+}
+
+.experiences-card-keyrus {
+  grid-area: keyrus;
+  border-right: 0.5px dashed grey;
+}
+
+.experiences-card-viseo {
+  grid-area: viseo;
+  border-right: 0.5px dashed grey;
+}
+
+.experiences-card-jl {
+  grid-area: jl;
+}
+
+.experience-list div div a {
+  display: inline-block;
+  margin: 15px 0 10px;
+  text-decoration: none;
+  color: var(--color-white);
+  padding: 5px 10px;
+  background-color: var(--color-bluemarin2);
+  border-radius: 5px;
+  font-size: 13px;
+  width: auto;
+}
+
+/* **** FORMATION ****  */
+
+.formation-list {
+  display: flex;
+  text-align: center;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+section.formation img {
+  max-width: 10%;
+  height: auto;
+  object-fit: cover;
+}
+
+.formation-card {
+  padding: 10px;
+}
+
+.formation-card:first-child {
+  border-right: 0.5px dashed grey;
+}
+
+/* **** FOOTER ****  */
+
+footer,
+footer p {
+  margin-top: 10px;
+  color: white;
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/* **** RESPONSIVE ****  */
+
+@media (max-width: 1100px) {
+  header {
+    flex-direction: column;
+  }
+  .header-right {
+    max-width: 100%;
+  }
+  .skills-container {
+    flex-direction: column;
+  }
+  .skills-business,
+  .skills-technical {
+    width: 100%;
+  }
+  .skills-business {
+    border: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .experience-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "dd mirakl"
+      "wynd keyrus"
+      "viseo jl";
+  }
+  .experiences-card-dd {
+    grid-area: dd;
+    border-right: 0.5px dashed grey;
+  }
+
+  .experiences-card-mirakl {
+    border: none;
+  }
+
+  .experiences-card-wynd {
+    border-right: 0.5px dashed grey;
+  }
+
+  .experiences-card-keyrus {
+    border: none;
+  }
+
+  .experiences-card-viseo {
+    border-right: 0.5px dashed grey;
+  }
+}
+
+@media (max-width: 750px) {
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  .experience-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "dd"
+      "mirakl"
+      "wynd"
+      "keyrus"
+      "viseo"
+      "jl";
+  }
+  .formation-list {
+    flex-direction: column;
+  }
+  .formation-card:first-child {
+    border-bottom: 0.5px dashed grey;
+  }
+}

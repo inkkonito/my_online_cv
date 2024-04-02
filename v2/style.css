@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --first-color: #66bfbf;
+  --second-color: #eaf6f6;
+  --third-color: #fafafa;
+  --thourth-color: #62929a;
+}
+* {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a {
+  color: var(--thourth-color);
+}
+
+a:hover {
+  color: var(--first-color);
+}
+/* *** NAV  */
+
+nav {
+  padding: 15px 0 10px;
+  color: var(--thourth-color);
+  background-color: var(--third-color);
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header li {
+  padding: 0 30px 0;
+  font-size: 1.2rem;
+}
+
+li img {
+  height: 75px;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  clip-path: circle();
+}
+
+/* *** TEXT BEFOR INTRO *** */
+
+section.head {
+  background-color: var(--second-color);
+}
+
+.text h1 {
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  padding: 10px 0 15px;
+  color: var(--first-color);
+}
+
+.interests {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px 10px;
+}
+
+.interests-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.interests-card img {
+  width: 60px;
+  margin-bottom: 5px;
+}
+
+/* *** INTRO ***  */
+
+.intro {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.intro-left {
+  background: url(./img/intro/intro-biarritz.jpg) center/cover;
+  min-width: 50%;
+  height: 100%;
+}
+
+.intro-left-details,
+.intro-right-details {
+  display: none;
+  min-width: 50%;
+  height: 100%;
+}
+
+.left-details-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(./img/intro/intro-ocean.jpg) center/cover;
+}
+
+.right-details-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(./img/intro/intro-security.jpg) center/cover;
+}
+
+.left-details-container > .detail,
+.right-details-container > .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 33%;
+  margin: 20px;
+}
+
+.left-details-container > .detail img,
+.right-details-container > .detail img {
+  width: 50px;
+}
+
+.intro-left:hover,
+.intro-right:hover {
+  transition: 1s;
+  background-image: none;
+  opacity: 1;
+}
+
+.intro-left:hover .intro-left-details,
+.intro-right:hover .intro-right-details {
+  display: block;
+}
+
+.intro-right:hover .intro-right-details {
+  display: block;
+}
+
+.intro-container {
+  height: 100%;
+  position: relative;
+}
+
+.intro p {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: whitesmoke;
+  text-align: center;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.intro-right {
+  background: url(./img/intro/intro-cyber.jpg) center/cover;
+  min-width: 50%;
+  height: 100%;
+}
+
+/* *** PREV JOBS ***  */
+
+section.pro h1 {
+  text-align: center;
+  padding: 20px;
+  color: var(--first-color);
+  background-color: var(--second-color);
+}
+.arrow-container {
+  display: block;
+  background-color: var(--third-color);
+}
+.arrow {
+  display: inline-block;
+  margin: 10px auto;
+  margin-left: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: #070d3c;
+  animation: timeline 5s linear infinite;
+  border-radius: 10px;
+}
+
+.previous-jobs {
+  padding-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--third-color);
+}
+
+.previous-jobs a > img {
+  max-width: 60%;
+  clip-path: circle();
+  transition: transform 0.5s;
+}
+
+.previous-jobs > .job-card-dd a > img {
+  animation: pulse 3s linear infinite alternate;
+}
+
+/* .previous-jobs img:hover {
+  transform: scale(1.1);
+} */
+
+.timeframe {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 10px;
+}
+
+/* *** JOB DESC ***  */
+
+.job-desc {
+  display: none;
+  background-color: #eaf6f6;
+  border-radius: 15px;
+  padding: 20px;
+  min-width: 60%;
+  text-align: left;
+  line-height: 1.8;
+  z-index: 1;
+}
+
+#dd-logo-large {
+  width: 200px;
+}
+
+.job-description-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.job-description-card ul li {
+  list-style-image: url(./img/logos/logo-datadome-icon.png);
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+.job-description-industries {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.job-description-industries img {
+  height: 60px;
+}
+
+.deals-won {
+  text-align: center;
+}
+
+.job-card-dd:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.job-card-dd:hover .body {
+  display: none;
+}
+
+.job-card-mirakl:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.job-card-wynd:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+
+.job-card-keyrus:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+.job-card-viseo:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+}
+
+.job-card-jlconsulting:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+}
+
+.job-card-empcorp:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+}
+
+.job-card-sdis78:hover .job-desc {
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+/* *** ANIMATIONS  ***  */
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatex(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatex(-10px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatex(0px);
+  }
+}
+
+@keyframes timeline {
+  0% {
+    transform: scaleX();
+  }
+
+  100% {
+    transform: scaleX(10%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
